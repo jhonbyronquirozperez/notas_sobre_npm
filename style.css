@@ -1,0 +1,90 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 10px;
+  }
+  
+  header.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  header.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  header.header p {
+    font-size: 1rem;
+  }
+  
+  /* Estilo para secciones */
+  .section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+  }
+  
+  .section ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .section ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Estilo para el pre y code */
+  pre {
+    background: #282c34;
+    color: #61dafb;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Estilo para el textarea */
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  /* Footer */
+  footer.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+  }
+  
