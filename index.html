@@ -50,13 +50,54 @@
 
     <!-- Sección de notas -->
     <section class="section notes">
-      <h2>Notas Adicionales</h2>
-      <textarea placeholder="Escribe tus notas aquí..." rows="6"></textarea>
+        <h2>Notas Adicionales</h2>
+        <textarea id="notes" placeholder="Escribe tus notas aquí..." rows="6"></textarea>
+        <div class="buttons">
+          <button id="saveNotes">Guardar Notas</button>
+          <button id="loadNotes">Cargar Notas</button>
+        </div>
     </section>
+      
   </main>
 
   <footer class="footer">
     <p>Creado por Jhon Byron | Curso de NPM</p>
   </footer>
+
+
+  <!--JavaScript-->
+  <script>
+    // Seleccionar elementos del DOM
+    const notesTextarea = document.getElementById('notes');
+    const saveButton = document.getElementById('saveNotes');
+    const loadButton = document.getElementById('loadNotes');
+  
+    // Guardar las notas en localStorage
+    saveButton.addEventListener('click', () => {
+      const notes = notesTextarea.value;
+      localStorage.setItem('savedNotes', notes);
+      alert('¡Notas guardadas con éxito!');
+    });
+  
+    // Cargar las notas desde localStorage
+    loadButton.addEventListener('click', () => {
+      const savedNotes = localStorage.getItem('savedNotes');
+      if (savedNotes) {
+        notesTextarea.value = savedNotes;
+        alert('¡Notas cargadas con éxito!');
+      } else {
+        alert('No hay notas guardadas.');
+      }
+    });
+  
+    // Cargar automáticamente las notas al abrir la página
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedNotes = localStorage.getItem('savedNotes');
+      if (savedNotes) {
+        notesTextarea.value = savedNotes;
+      }
+    });
+  </script>
+  
 </body>
 </html>
